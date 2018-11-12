@@ -1,0 +1,36 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #9c4274;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-duty styles
+// ----------------------------------------------------------------------------
+.widget-szn-duty {
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .team {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: -15px;
+    margin-top: 15px;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

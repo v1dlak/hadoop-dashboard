@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #CC6633;
+
+$title-color:       rgba(255, 255, 255, 1);
+
+// ----------------------------------------------------------------------------
+// Widget-text styles
+// ----------------------------------------------------------------------------
+.widget-cluster{
+
+  background-color: $background-color;
+
+  .title {
+    color: $title-color;
+    font-size: 76px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  img {
+	  height: 150px;
+  }
+}

@@ -1,0 +1,13 @@
+<h1 class="title"><span data-bind="title"></span> [<span data-bind="current"></span>]</h1>
+
+<ul class="jobs-container">
+  <li data-foreach-job="current_jobs" class="failed">
+    <span class="label name" data-bind="job.name | truncate 35"></span>
+    <div class="label last-run"><i class="icon-calendar"> </i><span data-bind="job.last_run | rjDateFromNow"></span></div>
+    <div class="label last-success-run"><i class="icon-thumbs-up"> </i><span data-bind="job.last_success_run | rjDateFromNow"></span></div>
+    <div class="clearfix" />
+  </li>
+</ul>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>

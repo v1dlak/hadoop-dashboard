@@ -1,0 +1,14 @@
+<h1 class="title"><span data-bind="title"></span></h1>
+
+<ul class="employee-container">
+  <li data-foreach-employee="current_employee" class="failed">
+    <div class="label">
+    <div class="label start-time"><span data-bind="employee.name" class="name"></span></div>
+    <div class="label type-user"><span data-bind="employee.status" class="status"></span></div>
+    </div>
+    <div class="clearfix" />
+  </li>
+</ul>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>

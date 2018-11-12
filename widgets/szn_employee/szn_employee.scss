@@ -1,0 +1,81 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color: #444;
+$value-color: #fff;
+
+$background-failed-color: #6fae7f;
+
+$title-color: rgba(255, 255, 255, 0.7);
+$label-color: rgba(0, 0, 0, 1);
+$label-color-last-run: rgba(0, 0, 0, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-szn-employee {
+
+  background-color: $background-color;
+  padding: 10px;
+  vertical-align: top;
+
+  .title {
+    color: $title-color;
+    font-weight: bold;
+    font-size: 2.3em;
+    padding: 10px;
+  }
+
+  ul {
+    margin: 0px;
+    text-align: left;
+    color: $label-color;
+
+    li {
+      display: block;
+      margin: 5px 0px;
+      padding: 5px;
+      font-weight: bold;
+
+      &.failed {
+        background-color: $background-failed-color;
+        border-bottom: 5px solid #508e52;
+      }
+    }
+
+    .label {
+      display: block;
+      color: $label-color;
+      font-size: 1.7em;
+
+      &.start-time {
+        float: left;
+        text-align: left;
+        font-size: 1.0em;
+        padding: 5px;
+        color: $label-color-last-run;
+      }
+
+      &.type-user {
+        float: right;
+        text-align: right;
+        font-size: 1.0em;
+        padding: 5px;
+        color: $label-color-last-run;
+      }
+    }
+
+  }
+
+
+  .value {
+    float: right;
+    margin-left: 12px;
+    font-weight: 600;
+    color: $value-color;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}

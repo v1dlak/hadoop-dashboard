@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /www/adm/a6tv
+exec dashing start

@@ -1,0 +1,64 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+//  Dashing.gridsterLayout('[{"col":1,"row":1},{"col":3,"row":1},{"col":4,"row":1},{"col":1,"row":2},{"col":4,"row":2},{"col":1,"row":3},{"col":4,"row":3}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+
+<% content_for :title do %>1080p dashboard<% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div id="map"></div> 
+      <script> 
+        function initMap() { 
+          var map = new google.maps.Map(document.getElementById('map'), { 
+            zoom: 13, 
+            center: {lat: 49.1941637, lng: 16.6048386} 
+          }); 
+ 
+          var trafficLayer = new google.maps.TrafficLayer(); 
+          trafficLayer.setMap(map); 
+        } 
+      </script> 
+      <script async defer 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqPUSKcNqeowu9DhPgkIHzT6aKZVtFPDI&callback=initMap"> 
+      </script>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="szn_employee" data-view="Szn_employee" data-title="Employee"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="DailyXKCD" data-id="xkcd-of-the-day"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="twitter_mentions_ftx" data-view="Comments" style="background-color:#ff9618;" data-moreinfo="Tweets @hledani_seznam and #seznambot"></div>
+      <i class="icon-twitter icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="launch_tesar" data-view="Launch_tesar" style="background-color:#00afd7;"></div>
+<!--
+      <div data-id="twitter_mentions_cld" data-view="Comments" style="background-color:#00afd7;" data-moreinfo="Tweets @Cloudera" ></div>
+      <i class="icon-twitter icon-background"></i>
+-->
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="memegenerator" data-view="BigImage"></div>
+    </li>
+
+  </ul>
+</div>

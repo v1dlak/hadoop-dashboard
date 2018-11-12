@@ -1,0 +1,52 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.gridsterLayout('[{"col":1,"row":1},{"col":2,"row":1},{"col":4,"row":1},{"col":5,"row":1},{"col":1,"row":2},{"col":3,"row":2},{"col":5,"row":2},{"col":5,"row":3}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+
+<% content_for :title do %>1080p dashboard<% end %>
+
+<div class="gridster">
+  <ul>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="fridex" data-view="Cluster" data-image="/assets/fridex.png" data-title="Fridex Cluster"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="fridex_dfs_nodes" data-view="HadoopNumber" data-title="HDFS" data-moreinfo1="Live" data-moreinfo2="Dead" data-moreinfo3="Deco" style="background-color: #96bf48;"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="fridex_dfs_usage" data-view="Meter" data-title="Dfs Usage"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="fridex_failed_jobs_list" data-view="FailedJobs" data-title="Failing Jobs"></div>
+      <i class="icon-gears icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="fridex_running_jobs_list" data-view="RunningJobs" data-title="Running Jobs"></div>
+      <i class="icon-gears icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="fridex_yarn_nodes" data-view="HadoopNumber" data-title="YARN" data-moreinfo1="Run" data-moreinfo2="Lost" data-moreinfo3="Unhealth" style="background-color: #47bbb3;"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="fridex_hbase" data-view="HadoopNumber" data-title="HBase" data-moreinfo1="RS" data-moreinfo2="Deadrs" data-moreinfo3="RITCount" style="background-color: #f99;"></div>
+    </li>
+
+  </ul>
+</div>

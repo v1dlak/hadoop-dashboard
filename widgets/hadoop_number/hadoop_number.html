@@ -1,0 +1,7 @@
+<h1 class="title" data-bind="title"></h1>
+
+<h2 class="live"><span class="column-left" data-bind="moreinfo1"></span><span data-bind="current_live | shortenedNumber | prepend prefix | append suffix"></span> <span class="change-rate"><i data-bind-class="arrow_live"></i><span data-bind="difference_live"></span></span></h2>
+<h2 class="dead"><span class="column-left" data-bind="moreinfo2"></span><span data-bind="current_dead | shortenedNumber | prepend prefix | append suffix"></span> <span class="change-rate"><i data-bind-class="arrow_dead"></i><span data-bind="difference_dead"></span></span></h2>
+<h2 class="deco"><span class="column-left" data-bind="moreinfo3"></span><span data-bind="current_deco | shortenedNumber | prepend prefix | append suffix"></span> <span class="change-rate"><i data-bind-class="arrow_deco"></i><span data-bind="difference_deco"></span></span></h2>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>
